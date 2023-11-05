@@ -11,39 +11,11 @@ TIMER_KICKOUT = 5; --Thêi gian kick khái game, mÆc ®Þnh lµ 5s
 
 TAB_LIST_GAMEMASTER = {
 	{
-		Account = "xboyhd",
-		Player = {"TCQGaming", "", ""},
+		Account = "1",
+		Player = {"BLH002", "", ""},
 		Password = "1",
 		Rank = 1,
-	},
-	
-	{
-		Account = "pgaming2",
-		Player = {"GameMaster02", "", ""},
-		Password = "1",
-		Rank = 1,
-	},
-	
-	{
-		Account = "pgaming3",
-		Player = {"GameMaster03", "", ""},
-		Password = "1",
-		Rank = 1,
-	},
-	
-	{
-		Account = "pgaming4",
-		Player = {"GameMaster04", "", ""},
-		Password = "1",
-		Rank = 1,
-	},
-	
-	{
-		Account = "pgaming5",
-		Player = {"GameMaster05", "", ""},
-		Password = "1",
-		Rank = 1,
-	},
+	}
 };
 
 TAB_LINKFILEDATA = {

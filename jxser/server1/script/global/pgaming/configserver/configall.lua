@@ -98,13 +98,13 @@ ThoiGianKetThucNhanThuongDuaTop = 202007110000
 ----------------BËt TÝnh N¨ng Test Game ------------------------------
 HoTroTestGame = 0
 -------------------C¸c TÝnh N¨ng Hæ Trî T©n Thñ ------------------------------
-NhanHoTroKyNang1xDen6x = 0 
+NhanHoTroKyNang1xDen6x = 1 
 VongSangHoTroTanThu = 0
 GioiHanCapNhanHoTroVongSang = 80
 TocDoHoiPhucManaVongSangHoTro = 100
 TocDoHoiPhucMauVongSangHoTro = 100
 ----------------ChØnh Server Theo D¹ng NhËn §å Free PK -------------------------
-ChinhServerPkNhanFullDoVaCap = 0
+ChinhServerPkNhanFullDoVaCap = 1
 --Th«ng tin: 
 -- + NhËn 1 bé trang bÞ hoµng kim m«n ph¸i tïy chän khãa, chØ chän ®­îc 1 lÇn
 -- + NhËn c¸c lo¹i ®iÓm (trõ tiÒn ®ång vµ KNB), thó c­ëi, ®æi mµu, thµnh lËp Bang, trang bÞ xanh, tÝm.
@@ -155,8 +155,8 @@ NangCapNgua = 0
 --============================================================================================================--
 --												Giíi h¹n IP													  --
 --============================================================================================================--
-GioiHanLoginIP = 0
-SoLuongAccGioiHan = 3
+GioiHanLoginIP = 1
+SoLuongAccGioiHan = 30
 --============================================================================================================--
 --												  Kü N¨ng													  --
 --============================================================================================================--
