@@ -3,6 +3,7 @@ IncludeLib("TITLE");
 Include("\\script\\battles\\battlehead.lua")
 Include("\\script\\battles\\marshal\\head.lua")
 Include("\\script\\task\\newtask\\branch\\branch_bwsj.lua")
+Include("\\script\\global\\vinh\\simcity\\controllers\\tongkim.lua")
 
 
 
@@ -171,6 +172,7 @@ function InitMission()
 
 	BT_SetMissionName("Ph­¬ng thøc B¶o vÖ Nguyªn so¸i")
 	BT_SetMissionDesc("Bèi c¶nh: N¨m 1160 C«ng nguyªn, Kim chñ Hoµn Nhan L­îng tËp hîp qu©n lùc, quyÕt ®Şnh Nam h¹, tiªu diÖt Tèng triÒu. T­¬ng D­¬ng lµ trë ng¹i ®Çu tiªn cña qu©n Kim, T­¬ng D­¬ng chuÈn bŞ ngËp ch×m trong khãi löa binh ®ao. <enter><enter><color=yellow>B¶o vÖ Nguyªn so¸i: sau khi khai chiÕn 30 phót, nguyªn so¸i 2 bªn sÏ lÇn luît xuÊt hiÖn.<enter> Môc tiªu: b¶o vÖ Nguyªn So¸i phe m×nh, tiªu diÖt Nguyªn So¸i phe ®Şch")
+	SimCityMainTongKim:addTongKimNpc()
 
 end
 
