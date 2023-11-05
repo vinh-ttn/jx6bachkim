@@ -232,7 +232,7 @@ addnewtasknpc={
 	--{1320,80,4,37,1714,3173,0,"B×nh B×nh C« N­¬ng",0,"\\script\\missions\\yandibaozang\\npc\\yandibaozang_main.lua"},
 	--{1320,80,4,37,1642,3145,0,"B×nh B×nh C« N­¬ng",0,"\\script\\missions\\yandibaozang\\npc\\yandibaozang_main.lua"},
 	--{1320,80,4,37,1622,3019,0,"B×nh B×nh C« N­¬ng",0,"\\script\\missions\\yandibaozang\\npc\\yandibaozang_main.lua"},
-	{1320,80,4,53,1631,3177,0,"Viªm §Õ ",0,"\\script\\missions\\yandibaozang\\npc\\yandibaozang_main.lua"},
+	--{1320,80,4,37,1857,2968,0,"B×nh B×nh C« N­¬ng",0,"\\script\\missions\\yandibaozang\\npc\\yandibaozang_main.lua"},
 
 	--{389,80,4,851,1577,3184,0,"D­îc th­¬ng",0,"\\script\\missions\\yandibaozang\\npc\\yaoshang.lua"},
 	--{389,80,4,851,1607,3178,0,"D­îc th­¬ng",0,"\\script\\missions\\yandibaozang\\npc\\yaoshang.lua"},
@@ -303,11 +303,11 @@ local tbActNpcList =
 	--{1327, 53,1632,3199,"\\script\\event\\zhongqiu_jieri\\200909\\rongshu\\shitouernpc.lua","TiÓu Thiªn"},
 		
 	
-	--{1393,176,1657,3261,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
-	--{1393,176,1577,2957,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
-	--{1393,176,1439,3267,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
-	--{1393,176,1385,2977,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
-	--{1393,53,1622,3185,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},	
+	{1393,176,1657,3261,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
+	{1393,176,1577,2957,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
+	{1393,176,1439,3267,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
+	{1393,176,1385,2977,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},
+--	{1393,53,1632,3192,"\\script\\missions\\dangboss\\gongnv_npc.lua","Ch­ëng §¨ng Cung N÷"},	
 
 
 	--{1454, 80,1768,3029,"\\script\\event\\zhongqiu_jieri\\200909\\dajibing\\head.lua","Lß B¸nh"},

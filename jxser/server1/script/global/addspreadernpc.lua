@@ -15,7 +15,7 @@ spreadernpc = {
 	--{1849,80,4,100,1627,3189,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},
 	--{1849,80,4,101,1694,3146,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},
 	--{1849,80,4,121,1946,4505,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},
-	{1849,80,4,53,1624,3185,0,"Hç Trî T©n Thñ",0,"\\script\\global\\general\\thunghiem\\main.lua"},
+	--{1849,80,4,53,1600,3197,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},
 	--{1849,80,4,153,1629,3242,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},
 	--{1849,80,4,174,1592,3248,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},
 	--{1849,80,4,174,1592,3248,0,"Hç Trî T©n Thñ",0,"\\script\\global\\npc\\hotrotanthu.lua"},

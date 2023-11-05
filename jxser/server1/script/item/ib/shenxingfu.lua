@@ -45,9 +45,10 @@ function main(sel)
 	end;
 
 	local tbOpt = {"Cã thÓ thiÕt lËp ®iÓm håi sinh, vµ còng cã thÓ di chuyÓn ®Õn mét n¬i thµnh thÞ, thÞ trÊn,… nµo ®ã ®­îc chØ ®Þnh."}
+		tinsert(tbOpt, "Rêi khái./no")
 		tinsert(tbOpt, "ThiÕt ®Æt ®iÓm håi sinh, lÇn sau nÕu ®¹i hiÖp sö dông thæ ®Þa phï sÏ ®Õn n¬i nµy/set_backpos")
 		tinsert(tbOpt, "Sö dông thuËt thÇn hµnh cã thÓ ®­a ®¹i hiÖp ®Õn thµnh thÞ th«n trÊn chØ ®Þnh/gototown")
-		tinsert(tbOpt, "Rêi khái./no")
+		tinsert(tbOpt, "§i ®Õn vÞ trÝ kh¸c/#tbVNGWORDPOS:GotoOtherMap()")
 	CreateTaskSay(tbOpt)
 	return 1	
 end;
@@ -126,14 +127,14 @@ end;
 function gototown()
 	
 	local tab_Content = {
+		"Rêi khái./no",
 		"Thµnh thÞ /gopos_step2town",
 		"Th«n trang/#gopos_step2(8)",
 		"m«n ph¸i/#gopos_step2(9)",
-		"B¶n ®å luyÖn c«ng t©n thñ/MapsTrain",
-		"B¶n ®å luyÖn c«ng cÊp 90/#gopos_step2lv90()",
+		"B¶n ®å luyÖn c«ng (d­íi 90)/MapsTrain",
+		"B¶n ®å luyÖn c«ng (trªn 90)/#gopos_step2lv90()",
 		"ChiÕn tr­êng Tèng Kim/gopos_step2battle",
-                                                            "Rêi khái./no",
-                                                            "Täa §é/toado",
+		"ChiÕn tr­êng ThÊt Thµnh §¹i ChiÕn/gopos_sevencityfield"
 	}
 	Say("H·y chän n¬i ng­¬i muèn di chuyÓn ®Õn ®ã.", getn(tab_Content), tab_Content);
 end;
@@ -141,6 +142,7 @@ end;
 
 function gopos_step2town()
 	local tab_Content = {
+		"Rêi khái./no",
 		"Thµnh §«/#gopos_step2(1)",
 		"T­¬ng D­¬ng/#gopos_step2(2)",
 		"Ph­îng T­êng/#gopos_step2(3)",
@@ -148,7 +150,6 @@ function gopos_step2town()
 		"BiÖn Kinh/#gopos_step2(5)",
 		"D­¬ng Ch©u/#gopos_step2(6)",
 		"L©m An/#gopos_step2(7)",
-                                                            "Rêi khái./no",
 	}
 	Say("H·y chän n¬i ng­¬i muèn di chuyÓn ®Õn ®ã.", getn(tab_Content), tab_Content);
 end
@@ -161,11 +162,6 @@ function gopos_step2(nIdx)
 	end;
 	tinsert(tab_Content, "Rêi khái/no");
 	Say("H·y chän n¬i ng­¬i muèn di chuyÓn ®Õn ®ã.", getn(tab_Content), tab_Content);
-end;
-function toado()
-local w,x,y = GetWorldPos()		
-local nIdPlay = PlayerIndex		
-Say("M¸p sè <color=Green>"..w.."<color> täa ®é <color=Yellow>"..x..", "..y)
 end;
 
 --ÉñÐÐ·û£­£­£­£­µÚÈý²½
