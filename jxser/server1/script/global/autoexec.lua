@@ -348,6 +348,7 @@ Include("\\script\\activitysys\\g_activity.lua")
 Include("\\script\\event\\other\\shensuanzi\\class.lua")
 Include("\\script\\activitysys\\functionlib.lua")
 Include("\\script\\task\\150skilltask\\g_task.lua")
+Include("\\script\\global\\vinh\\main.lua")
 
 Include("\\script\\huashan\\npcfaction.lua")
 function main()
@@ -496,6 +497,8 @@ function main()
 	
 	local szFile ="\\script\\event\\great_night\\great_night_head.lua"
 	DynamicExecute(szFile,"OnGreatNightServerStart")
+	add_npc_vinh()
+
 end;
 
 function load_mission_aexp()
