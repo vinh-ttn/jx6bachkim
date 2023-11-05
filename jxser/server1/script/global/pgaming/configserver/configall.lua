@@ -3,8 +3,8 @@
 
 FanePage = "www.facebook.com/grouppgaminggameoffline"
 
-CapKhiLoginVaoServer = 0
-CapDo = 1 --§¨ng nhËp lÇn ®Çu khi t¹o nh©n vËt tù ®éng lªn cÊp theo chØ ®Þnh
+CapKhiLoginVaoServer = 1
+CapDo = 119 --§¨ng nhËp lÇn ®Çu khi t¹o nh©n vËt tù ®éng lªn cÊp theo chØ ®Þnh
 --============================================================================================================--
 --													Ho¹t §éng												  --
 --============================================================================================================--
