@@ -120,7 +120,7 @@ function GoSeriesGetItemBlue(szKind, nType)
 end
 
 function GoInputCountGetItemBlue(szKind, nType, nSeries)
-	g_AskClientNumberEx(0, 10, "NhËp sè l­îng:", {GoGetItemBlue, {szKind, nType, nSeries}})
+	g_AskClientNumberEx(0, 20, "NhËp sè l­îng:", {GoGetItemBlue, {szKind, nType, nSeries}})
 end
 
 function GoGetItemBlue(szKind, nType, nSeries, nCount)

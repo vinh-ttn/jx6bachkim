@@ -41,5 +41,3 @@ function LenhBaiTanThu()
 	return end
 	tbAwardTemplet:GiveAwardByList({tbProp={6,1,4851,1,0,0}, nBindState=-2}, "Tói m¸u T©n Thñ")
 end
-
-pEventType:Reg("Hç Trî T©n Thñ", "Hç trî ng­êi ch¬i", HoTroTanThu);
