@@ -4,16 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
-Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
-npc_name = "§­êng M«n ThŞ vÖ "
+npc_name = "§­êng M«n ThŞ vÖ"
+NPCNAME = "<color=green>"..npc_name.."<color>: ";
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 2 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyutangmen","Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyutangmen",NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "tangmen") then
 		Say("M«n chñ ph¸i ng­¬i ®Õn ®©y lµm g×??",4,"Xin ®­a t¹i h¹ vÒ Tæng ®µn!/return_yes","T×m hiÓu khu vùc luyÖn c«ng/map_help","T×m hiÓu vâ nghÖ bæn m«n/skill_help","Ta ph¶i ®i lµm viÖc kh¸c ®©y/no")
 --		Say("ÌÆÃÅÊÌÎÀ£º²»ºÃÒâË¼£¬ÒòÎªÓĞĞ©ÈËµÄÈÎÎñ×´Ì¬²»ÕıÈ·£¬ÎÒÃÇÕıÔÚÖØĞÂÎªÃÅÏÂµÜ×Ó½øĞĞ¼ì²é¡£ÄãÒª¼ì²éÄãµÄÈÎÎñ×´Ì¬Âğ£¿Èç¹ûÄãÈÏÎªÄãµÄ×´Ì¬ÊÇÕıÈ·µÄ¾Í²»±Ø¼ì²éÁË¡£",2,"¼ì²é/tm_check_yes","²»ÓÃÁË/tm_check_no")
@@ -73,19 +73,19 @@ function go()
 	SetFaction("tangmen")      				--Íæ¼Ò¼ÓÈëÌÆÃÅ
 	SetCamp(3)
 	SetCurCamp(3)
-	SetRank(25)
+--	SetRank(25)
 	nt_setTask(137,62)
 	SetLastFactionNumber(2)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
---	nt_setTask(2,80*256)
---	SetRank(76)
---	Msg2Player("»¶Ó­Äã¼ÓÈëÌÆÃÅ£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+	-- nt_setTask(2,80*256)
+	SetRank(76)
+	-- Msg2Player("»¶Ó­Äã¼ÓÈëÌÆÃÅ£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_tm(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
 	Msg2Player("Hoan nghªnh b¹n gia nhËp §­êng m«, trë thµnh T¹p dŞch! Häc ®­îc vâ c«ng Tİch LŞch §¬n")
 	AddNote("Gia nhËp §­êng M«n, trë thµnh T¹p dŞch.")
-	Msg2Faction("tangmen",GetName().."tõ h«m nay gia nhËp §­êng M«n, xin b¸i kiÕn c¸c vŞ huynh tû. Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	--NewWorld(25, 3982, 5235)				--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	Msg2Faction("tangmen",GetName().." tõ h«m nay gia nhËp §­êng M«n, xin b¸i kiÕn c¸c vŞ huynh tû. Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
+	NewWorld(25, 3982, 5235)				--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 
 end;
 

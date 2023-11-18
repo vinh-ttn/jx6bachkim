@@ -4,16 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
-Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
 npc_name = "Ngò §éc T¶n Nh©n"
+NPCNAME = "<color=green>"..npc_name.."<color>: ";
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 3 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyuwudu","Ng­¬i ®· lµ ®Ö tö cña bæn gi¸o, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyuwudu", NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn gi¸o, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "cuiyan") then
 		Talk(1,"","TiÓu mü n÷! §Õn th¨m ca ca nµy ­? Cho ta th¬m mét c¸i nµo! Hi hi!")
 	elseif (player_Faction == "emei") then				
@@ -45,7 +45,7 @@ function default_talk()
 		elseif (UTask_wu >= 70*256) and (player_Faction ~= "wudu") then					--ÒÑ¾­³öÊ¦
 			Say("L©u l¾m kh«ng gÆp! Xem ra d¹o nµy ng­¬i ®· kh¸ h¬n tr­íc nhiÒu",3,"T×m hiÓu së tr­êng luyÖn c«ng/map_help","T×m hiÓu vâ nghÖ bæn m«n/skill_help","KÕt thóc ®èi tho¹i/no")
 		else
-			Talk(1,"enroll_select","Ngò §éc gi¸o hiÖn nay ®ang lóc h­ng thŞnh, l¹i liªn kÕt víi Thiªn NhÉn gi¸o hç trî §¹i Kim nam h¹! Ngµy sau vinh hoa phó quı sÏ cïng h­ëng!")
+			Talk(1,"enroll_select","<enter>Ngò §éc gi¸o hiÖn nay ®ang lóc h­ng thŞnh, l¹i liªn  kÕt víi Thiªn NhÉn gi¸o hç trî §¹i Kim nam h¹! Ngµy  sau vinh hoa phó quı sÏ cïng h­ëng!")
 		end
 	end
 end;
@@ -81,19 +81,19 @@ function go()
 	SetFaction("wudu")       			--Íæ¼Ò¼ÓÈë¶ëáÒÅÉ
 	SetCamp(2)
 	SetCurCamp(2)
-	SetRank(49)
+--	SetRank(49)
 	nt_setTask(137,70)
 	SetLastFactionNumber(3)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
---	nt_setTask(10,80*256)
---	SetRank(80)
---	Msg2Player("»¶Ó­Äã¼ÓÈëÎå¶¾½Ì£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+	-- nt_setTask(10,80*256)
+	SetRank(80)
+	-- Msg2Player("»¶Ó­Äã¼ÓÈëÎå¶¾½Ì£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_wu(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
 	Msg2Player("Hoan nghªnh b¹n Gia nhËp Ngò §éc gi¸o, trë thµnh Ngò §éc §ång Tö! Häc ®­îc §éc Sa Ch­ëng, HuyÕt §ao §éc S¸t.")
 	AddNote("Gia nhËp Ngò §éc gi¸o, trë thµnh Ngò §éc §ång Tö.")
-	Msg2Faction("wudu",GetName().."tõ h«m nay gia nhËp Ngò §éc gi¸o, xin b¸i kiÕn c¸c vŞ huynh tû. Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	--NewWorld(183, 1746, 2673)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	Msg2Faction("wudu",GetName().." tõ h«m nay gia nhËp Ngò §éc gi¸o, xin b¸i kiÕn c¸c vŞ huynh tû. Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
+	NewWorld(183, 1746, 2673)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 
 end;
 

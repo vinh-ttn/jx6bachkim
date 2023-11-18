@@ -4,16 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
-Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
-npc_name = "§Ö tö 3 tói C¸i Bang "
+npc_name = "§Ö tö C¸i Bang "
+NPCNAME = "<color=green>"..npc_name.."<color>: ";
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 6 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyugaibang","Ng­¬i ®· lµ ®Ö tö cña bæn gi¸o, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyugaibang", NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn gi¸o, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "cuiyan") then
 		Talk(1,"","Tõ l©u nghe tiÕng c¸c c« n­¬ng Thóy Yªn ®Ñp nh­ tiªn n÷, vŞ c« n­¬ng nµy cho ¨n mµy ta İt tiÒn uèng r­îu ®­îc ch¨ng?")
 	elseif (player_Faction == "emei") then				
@@ -85,19 +85,19 @@ function go()
 	SetFaction("gaibang")       			--Íæ¼Ò¼ÓÈëÃÅÅÉ
 	SetCamp(1)
 	SetCurCamp(1)
-	SetRank(37)
+--	SetRank(37)
 	nt_setTask(137,68)
 	SetLastFactionNumber(6)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
---	nt_setTask(8,80*256)
---	SetRank(78)
---	Msg2Player("»¶Ó­Äã¼ÓÈëØ¤°ï£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+	-- nt_setTask(8,80*256)
+	SetRank(78)
+	-- Msg2Player("»¶Ó­Äã¼ÓÈëØ¤°ï£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_gb(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
 	Msg2Player("Hoan nghªnh b¹n gia nhËp C¸i bang, trë thµnh §Ö tö kh«ng tói! Häc ®­îc KiÕn Nh©n ThÇn Thñ, Diªn M«n Th¸c B¸t")
-	AddNote("Gia nhËp C¸i bang, trë thµnh §Ö tö kh«ng tói.")
-	Msg2Faction("gaibang",GetName().."Tõ h«m nay gia nhËp C¸i bang! Xin b¸i kiÕn c¸c vŞ s­ huynh s­ tû! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	--NewWorld(115, 1501, 3672)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	AddNote("Gia nhËp C¸i bang, trë thµnh §Ö tö C¸i Bang.")
+	Msg2Faction("gaibang",GetName().." tõ h«m nay gia nhËp C¸i bang! Xin b¸i kiÕn c¸c vŞ s­ huynh s­ tû! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
+	NewWorld(115, 1501, 3672)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 
 end;
 

@@ -4,7 +4,6 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
-Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
 npc_name = "Vâ §ang §¹o Nh©n"
 
@@ -74,19 +73,19 @@ function go()
 	SetFaction("wudang")      				--Íæ¼Ò¼ÓÈëÎäµ±
 	SetCamp(1)
 	SetCurCamp(1)
-	SetRank(7)
+--	SetRank(7)
 	nt_setTask(137,65)
 	SetLastFactionNumber(8)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
---	nt_setTask(5,80*256)
---	SetRank(73)
---	Msg2Player("»¶Ó­Äã¼ÓÈëÎäµ±ÅÉ£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+	-- nt_setTask(5,80*256)
+	SetRank(73)
+	-- Msg2Player("»¶Ó­Äã¼ÓÈëÎäµ±ÅÉ£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_wd(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
 	Msg2Player("Hoan nghªn b¹n gia nhËp Vâ §ang ph¸i! H·y b¾t ®Çu tõ mét §¹o ®ång! Häc ®­îc vâ c«ng Né L«i ChØ, Th­¬ng h¶i Minh NguyÖt!")
 	AddNote("gia nhËp Vâ §ang ph¸i, trë thµnh §¹o ®ång!")
-	Msg2Faction("wudang",GetName().."tõ h«m nay gia nhËp Vâ §ang ph¸i, tr­íc tiªn ®Õn b¸i kiÕn c¸c vŞ s­ huynh, s­ tû!",GetName())
-	--NewWorld(81, 1574, 3224)				--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	Msg2Faction("wudang",GetName().." tõ h«m nay gia nhËp Vâ §ang ph¸i, tr­íc tiªn ®Õn b¸i kiÕn c¸c vŞ s­ huynh, s­ tû!",GetName())
+	NewWorld(81, 1574, 3224)				--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 
 end;
 
@@ -141,8 +140,6 @@ function Uworld1000_jiaoyuwudang()
 	nt_setTask(1000,260)
 	Msg2Player("§Ö tö tiÕp dÉn Vâ §ang b¶o b¹n ®· lµ ®Ö tö cña m«n pahİ, cã thÓ trùc tiÕp ®i gÆp Long Ngò nãi chuyÖn.")
 end
-
-
 
 function no()
 end;

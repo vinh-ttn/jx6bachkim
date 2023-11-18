@@ -32,15 +32,15 @@ function zhuansheng_ondialog()
 	
 	local n_date = tonumber(GetLocalDate("%Y%m%d"));
 	
-	if (n_transcount == 0 and n_level == 199 and (n_date >= ZHUANSHENG_ITEM_BEGIN and n_date <= ZHUANSHENG_ITEM_ENDLE)) then --ĞèÒª¼ÓÈëÊ±¼äÏŞÖÆ
+	if (n_transcount == 0 and n_level == 200 and (n_date >= ZHUANSHENG_ITEM_BEGIN and n_date <= ZHUANSHENG_ITEM_ENDLE)) then --ĞèÒª¼ÓÈëÊ±¼äÏŞÖÆ
 		tinsert(tbOpp, "Ta muèn t×m hiÓu vÒ B¾c §Èu Tiªn §¬n/zhuansheng_xiandan");
 	end
 	
 	tinsert(tbOpp, "Xin hái tu luyÖn <B¾c §Èu Tr­êng Sinh ThuËt - T©m Ph¸p Thiªn> cÇn nh÷ng ®iÒu kiÖn g×?/zhuansheng_help_require");
 	tinsert(tbOpp, "Lµm thÕ nµo cã thÓ häc <B¾c §Èu Tr­êng Sinh ThuËt - T©m Ph¸p Thiªn>?/zhuansheng_help_method");
-	--tinsert(tbOpp, "Xin hái ®¼ng cÊp cña ta cã thÓ l­u gi÷ bao nhiªu ®iÓm kü n¨ng vµ tiÒm n¨ng?/zhuansheng_help_prop");
-	--tinsert(tbOpp, "Xin hái ta cã thÓ tu luyÖn ®Õn møc ®é nµo råi?/zhuansheng_query");
-	--tinsert(tbOpp, "Xin hái thêi gian ®Ó chuyÓn sinh lÇn kÕ tiÕp: /zhuansheng_time");
+	tinsert(tbOpp, "Xin hái ®¼ng cÊp cña ta cã thÓ l­u gi÷ bao nhiªu ®iÓm kü n¨ng vµ tiÒm n¨ng?/zhuansheng_help_prop");
+	tinsert(tbOpp, "Xin hái ta cã thÓ tu luyÖn ®Õn møc ®é nµo råi?/zhuansheng_query");
+	tinsert(tbOpp, "Xin hái thêi gian ®Ó chuyÓn sinh lÇn kÕ tiÕp: /zhuansheng_time");
 	tinsert(tbOpp, "KÕt thóc ®èi tho¹i/OnCancel");
 	
 	CreateTaskSay(tbOpp);
@@ -88,7 +88,7 @@ function zhuansheng_help_method()
 		.. "<color=yellow>Tr­êng B¹ch S¬n Nam, D­îc V­¬ng §éng TÇng 4, Sa M¹c S¬n §éng 3, Kháa Lang §éng <color> ®¸nh b¹i <color=yellow> S­¬ng §ao, Xuyªn S¬n, TËt Phong, ¶nh C«n <color>"
 		.. "Míi cã tØ lÖ nhÊt ®Şnh nhËn ®­îc Tİch LŞch §¬n vËt cÇn thiÕt ®Ó chuyÓn sinh 4.", 
 		"§­îc, ta muèn häc ngay./zhuansheng_want_learn",
-		--"NhËn nhiÖm vô chuyÓn sinh 4/wantGetTranslifeTask_4",
+		"NhËn nhiÖm vô chuyÓn sinh 4/wantGetTranslifeTask_4",
 		"Ta muèn t×m hiÓu chi tiÕt h¬n/zhuansheng_ondialog",
 		"Ta biÕt rå/OnCancel"});
 end
@@ -106,10 +106,10 @@ function zhuansheng_want_learn()
 
 	local nTaskValue = GetTask(2885)
 	local nTmpRes = floor(nTaskValue/100)
-	--if nTaskValue > 0 and mod(nTmpRes, 100) < 14 then
-	--	Msg2Player("Ng­¬i ®· nhËn nhiÖm vô kü n¨ng 150, xin h·y hoµn thµnh nhiÖm vô råi h·y ®Õn gÆp ta")
-	--	return 
-	--end
+	if nTaskValue > 0 and mod(nTmpRes, 100) < 14 then
+		Msg2Player("Ng­¬i ®· nhËn nhiÖm vô kü n¨ng 150, xin h·y hoµn thµnh nhiÖm vô råi h·y ®Õn gÆp ta")
+		return 
+	end
 
 	if (check_zhuansheng() == 0) then
 		return 0;

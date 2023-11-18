@@ -37,64 +37,64 @@ end
 function main(bExchangeIn)
 	PlayerList:AddPlayer(PlayerIndex)
 	TaskManager:ResetUseGroup()
-		LoginDelaySync(1)
-	--============================T¾t Chøc N¨ng Giao DÞch ============================
-	if KhoaChucNangBayBan == 1 then
-	DisabledStall(1)
-	else
-	DisabledStall(0)
+	LoginDelaySync(1)
+--============================T¾t Chøc N¨ng Giao DÞch ============================
+if KhoaChucNangBayBan == 1 then
+DisabledStall(1)
+else
+DisabledStall(0)
+end
+--============================T¾t Chøc N¨ng Giao DÞch ============================
+if KhoaChucNangGiaoDich == 1 then
+ForbitTrade(1)
+else
+ForbitTrade(0)
+end
+--============================ChØnh CÊp ®é khi ®¨ng nhËp vµo Server ============================
+if CapKhiLoginVaoServer == 1 then
+	if GetLevel() < CapDo then
+	local nCureLevel = GetLevel()
+	local nAddLevel = CapDo - nCureLevel
+	ST_LevelUp(nAddLevel)
 	end
-	--============================T¾t Chøc N¨ng Giao DÞch ============================
-	if KhoaChucNangGiaoDich == 1 then
-	ForbitTrade(1)
-	else
-	ForbitTrade(0)
-	end
-	--============================ChØnh CÊp ®é khi ®¨ng nhËp vµo Server ============================
-	if CapKhiLoginVaoServer == 1 then
-		if GetLevel() < CapDo then
-		local nCureLevel = GetLevel()
-		local nAddLevel = CapDo - nCureLevel
-		ST_LevelUp(nAddLevel)
-		end
-	end
-	--============================Giíi h¹n account ============================
-	if GioiHanLoginIP == 1 then
-		if (LimitAccountPerIP:Login() == 1) then
-			OfflineLive(PlayerIndex)
-			KickOutSelf();
-			return
-		end;
-	end
-	--============================Set Task ñy Th¸c VÒ 0============================
-	SetTask(5998,0)
-	--============================xep hang tinh luc ============================
-		LoginMain()
-	--==========================================================================
-	if CauCa == 1 then
-	local nSubWorldID = GetWorldPos();
-	if (nSubWorldID == 1009) and GetFightState() == 1 then
-	SetFightState(1)
-	SetFightState(1)
-	SetPKFlag(1)
-	ForbidChangePK(1)
-	end
-	end
-	--Kick ng­êi ch¬i bÞ khãa
-	DynamicExecute("\\script\\global\\gm\\gm_script.lua", "tbAloneScript:GameServerKickOut", PlayerIndex);
-	--Hç trî GM khi vµo server
-	tbAloneScript:GMLoginInGame();
-	GMLoginInGame()
-	--Reset mËt khÈu r­¬ng
+end
+--============================Giíi h¹n account ============================
+if GioiHanLoginIP == 1 then
+	if (LimitAccountPerIP:Login() == 1) then
+		OfflineLive(PlayerIndex)
+		KickOutSelf();
+		return
+	end;
+end
+--============================Set Task ñy Th¸c VÒ 0============================
+SetTask(5998,0)
+--============================xep hang tinh luc ============================
+	LoginMain()
+--==========================================================================
+if CauCa == 1 then
+local nSubWorldID = GetWorldPos();
+if (nSubWorldID == 1009) and GetFightState() == 1 then
+SetFightState(1)
+SetFightState(1)
+SetPKFlag(1)
+ForbidChangePK(1)
+end
+end
+--Kick ng­êi ch¬i bÞ khãa
+		DynamicExecute("\\script\\global\\gm\\gm_script.lua", "tbAloneScript:GameServerKickOut", PlayerIndex);
+--Hç trî GM khi vµo server
+		tbAloneScript:GMLoginInGame();
+		GMLoginInGame()
+--Reset mËt khÈu r­¬ng
 	ResetBox:AnnounceResetBoxDate()
-	--Online nhËn th­ëng
-		if (OnlineAward_StartDate() == 1 and OnlineAward_Check_TransferLife() ~= 0) then
-			Msg2Player("§ang trong thêi gian ho¹t ®éng Online NhËn Th­ëng")
-			OnlineAward_ResetDaily()
-			OnlineAward_SummaryOnlineTime()
-			OnlineAward_StartTime()
-		end
-	if (TB_LOGIN_FUN[0]) then
+--Online nhËn th­ëng
+	if (OnlineAward_StartDate() == 1 and OnlineAward_Check_TransferLife() ~= 0) then
+		Msg2Player("§ang trong thêi gian ho¹t ®éng Online NhËn Th­ëng")
+		OnlineAward_ResetDaily()
+		OnlineAward_SummaryOnlineTime()
+		OnlineAward_StartTime()
+	end
+if (TB_LOGIN_FUN[0]) then
 		for i = 1, getn(TB_LOGIN_FUN[0]) do
 			local func = TB_LOGIN_FUN[0][i]
 			if (func) then
@@ -103,16 +103,9 @@ function main(bExchangeIn)
 		end
 	end
 
-	for i = 1, getn(TB_LOGIN_FILEFUN) do
+for i = 1, getn(TB_LOGIN_FILEFUN) do
 		local reg = TB_LOGIN_FILEFUN[i]
 		DynamicExecute(reg[1], reg[2], PlayerIndex, bExchangeIn)
-	end
-
-	local ids = {1266,438,4905,4906,4907,4908,4909,4910,4911,4912}
-	for i=1,getn(ids) do
-		if HaveCommonItem(6,1,ids[i])<1 then
-		tbAwardTemplet:GiveAwardByList({{szName="Phï",tbProp={6,1,ids[i],1,0},nCount=1,},}, "npctest", 1);
-		end
 	end
 
 end

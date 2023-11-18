@@ -17,7 +17,7 @@ Include("\\script\\battles\\doubleexp.lua")
 
 FRAME2TIME = 18;	--18帧游戏时间相当于1秒钟
 BAOMING_TIME = 1		-- 10分钟报名时间	
-FIGHTING_TIME = 4		-- 60分钟比赛时间
+FIGHTING_TIME = 28		-- 60分钟比赛时间
 ANNOUNCE_TIME = 20		-- 20秒公布一下战况
 
 TIMER_1 = ANNOUNCE_TIME * FRAME2TIME; --20秒公布一下战况

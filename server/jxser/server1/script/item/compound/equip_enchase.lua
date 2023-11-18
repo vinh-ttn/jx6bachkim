@@ -35,13 +35,11 @@ end
 
 -- 获取[合成]操作参数（用于传递给ITEM_CalcItemValue计算物品价值量）
 function getCompoundParam()
-do return end
 	return "EQUIP_ENCHASE";
 end
 
 -- 校验原料是否符合[合成]规则（同时存储一些原料数据）
 function verifySrcItems( arynNecessaryItemIdx, arynAlternativeItemIdx )
-do return end
 	local nNecessaryItemCount = getn( arynNecessaryItemIdx );
 	local nOreMagLvlPos = 0;
 	local nOreSeries = 0;
@@ -94,7 +92,6 @@ end
 
 -- 生成目标物品信息
 function genDesItemsInfo( arynNecessaryItemIdx )
-do return end
 	local aryDesItemInfo = {};
 	local aryMagAttrLvlRange = getMagAttrLvlRange( g_nEquipVer, g_nOreMagicID, 1 );
 	local nRangeCount = getn( aryMagAttrLvlRange );
@@ -117,7 +114,6 @@ end
 
 -- 完成选择目标物品、删除原料等收尾操作
 function finalCompound( arynNecessaryItemIdx, arynAlternativeItemIdx, nSrcItemValSum, aryDesItemInfo, arydDesItemVal )
-do return end
 	local nEquipVal = ITEM_CalcItemValue( g_nEquipIdx, getCompoundParam() );
 	local nDesItemCount = getn( arydDesItemVal );
 	for i = 1, nDesItemCount do
@@ -177,7 +173,6 @@ end
 
 -- 预览[合成]的成功率
 function previewProb( arynNecessaryItemIdx, arynAlternativeItemIdx, nSrcItemValSum, aryDesItemInfo, arydDesItemVal )
-do return end
 	-- 暂时关闭预览
 	do return end
 	
@@ -247,7 +242,6 @@ end
 
 -- 计算必须材料中的[合成]关键物品的价值总量，限制可选材料价值量加权
 function sumMainItemVal( arynNecessaryItemIdx )
-do return end
 	local nMainItemValSum = 0;
 	for i = 1, getn( arynNecessaryItemIdx ) do
 		local nGenre, nDetailType, nParticular, nLevel, nSeries, nLuck = GetItemProp( arynNecessaryItemIdx[i] );

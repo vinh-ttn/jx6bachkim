@@ -1,0 +1,46 @@
+[Normal]Item: Phiªn Vò (0,0,10,7,0,10), unbind = 0, bind = 2000
+[Normal]Item: Thanh C©u PhËt §µ Cµ Sa(0,1,919,4,2,10), unbind = 0, bind = 20
+[Normal]Item: Thanh C©u PhËt §µ T¨ng C«n(0,1,920,4,0,10), unbind = 0, bind = 20
+[Normal]Item: Thanh C©u PhËt §µ T¨ng Hµi(0,1,921,1,4,10), unbind = 0, bind = 20
+[Normal]Item: Thanh C©u PhËt §µ Yªu Trôy(0,1,922,1,3,10), unbind = 0, bind = 20
+[Normal]Item: Thanh C©u PhËt §µ H¹ Giíi(0,1,923,1,1,10), unbind = 0, bind = 20
+[Normal]Item: To¸n §Çu chïy(0,0,0,4,0,1), unbind = 0, bind = 0
+[Normal]Item: ChiÕu D¹ Ngäc S­ Tö (0,0,10,5,0,5), unbind = 0, bind = 80
+[Normal]Item: H¸m Thiªn Kim Hoµn §¹i Nh·n ThÇn Chïy(0,1,15,4,2,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p(0,1,16,4,0,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Uy Vò Thóc yªu ®¸i(0,1,17,1,4,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Hæ ®Çu KhÈn Thóc UyÓn(0,1,18,1,3,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Thõa Long ChiÕn Ngoa(0,1,19,1,1,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Kim Hoµn §¹i Nh·n ThÇn Chïy(0,1,15,4,2,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p(0,1,16,4,0,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Uy Vò Thóc yªu ®¸i(0,1,17,1,4,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Hæ ®Çu KhÈn Thóc UyÓn(0,1,18,1,3,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Thõa Long ChiÕn Ngoa(0,1,19,1,1,10), unbind = 0, bind = 50
+[Normal]Item: [Hoµn Mü] An Bang B¨ng Tinh Th¹ch H¹ng Liªn(0,1,209,0,4,10), unbind = 0, bind = 100
+[Normal]Item: [Hoµn Mü] An Bang Cóc Hoa Th¹ch ChØ Hoµn(0,1,210,0,2,8), unbind = 0, bind = 100
+[Normal]Item: [Hoµn Mü] An Bang §iÒn Hoµng Th¹ch Ngäc Béi(0,1,211,1,1,8), unbind = 0, bind = 100
+[Normal]Item: [Hoµn Mü] An Bang Kª HuyÕt Th¹ch Giíi ChØ(0,1,212,0,3,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang B¨ng Tinh Th¹ch H¹ng Liªn(0,1,163,0,4,10), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang Cóc Hoa Th¹ch ChØ hoµn(0,1,164,0,2,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang §iÒn Hoµng Th¹ch Ngäc Béi(0,1,165,1,1,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang Kª HuyÕt Th¹ch Giíi ChØ (0,1,166,0,3,8), unbind = 0, bind = 100
+[Normal]Item: ChiÕu D¹ Ngäc S­ Tö (0,0,10,5,0,5), unbind = 0, bind = 80
+[Normal]Item: To¸n §Çu chïy(0,0,0,4,0,1), unbind = 0, bind = 0
+[Normal]Item:  §å phæ Hoµng Kim - An Bang B¨ng Tinh Th¹ch H¹ng Liªn(0,1,163,0,4,10), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang Cóc Hoa Th¹ch ChØ hoµn(0,1,164,0,2,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang §iÒn Hoµng Th¹ch Ngäc Béi(0,1,165,1,1,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang Kª HuyÕt Th¹ch Giíi ChØ (0,1,166,0,3,8), unbind = 0, bind = 100
+[Normal]Item: H¸m Thiªn Kim Hoµn §¹i Nh·n ThÇn Chïy(0,1,15,4,2,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p(0,1,16,4,0,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Uy Vò Thóc yªu ®¸i(0,1,17,1,4,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Hæ ®Çu KhÈn Thóc UyÓn(0,1,18,1,3,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Thõa Long ChiÕn Ngoa(0,1,19,1,1,10), unbind = 0, bind = 50
+[Normal]Item: ChiÕu D¹ Ngäc S­ Tö (0,0,10,5,0,5), unbind = 0, bind = 80
+[Normal]Item: ChiÕu D¹ Ngäc S­ Tö (0,0,10,5,0,5), unbind = 0, bind = 80
+[Normal]Item: H¸m Thiªn Hæ ®Çu KhÈn Thóc UyÓn(0,1,18,1,3,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Uy Vò Thóc yªu ®¸i(0,1,17,1,4,10), unbind = 0, bind = 50
+[Normal]Item: H¸m Thiªn Vò ThÇn T­¬ng Kim Gi¸p(0,1,16,4,0,10), unbind = 0, bind = 50
+[Normal]Item:  §å phæ Hoµng Kim - An Bang Kª HuyÕt Th¹ch Giíi ChØ (0,1,166,0,3,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang §iÒn Hoµng Th¹ch Ngäc Béi(0,1,165,1,1,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang Cóc Hoa Th¹ch ChØ hoµn(0,1,164,0,2,8), unbind = 0, bind = 100
+[Normal]Item:  §å phæ Hoµng Kim - An Bang B¨ng Tinh Th¹ch H¹ng Liªn(0,1,163,0,4,10), unbind = 0, bind = 100

@@ -1,4 +1,3 @@
-
 INFORMATION_DEVELOPER = ""
 
 TASKTEMP_LOGIN_LBGM = 250;
@@ -11,12 +10,12 @@ TIMER_KICKOUT = 5; --Thêi gian kick khái game, mÆc ®Þnh lµ 5s
 
 TAB_LIST_GAMEMASTER = {
 	{
-		Account = "12",
-		Player = {"BLH001a", "BLH004a", ""},
+		Account = "1",
+		Player = {"BLH002", "", ""},
 		Password = "1",
 		Rank = 1,
-	} 
-}
+	}
+};
 
 TAB_LINKFILEDATA = {
 	[1] = {"\\data\\gm\\lockplayer.log", "LOCK_PLAYER"},

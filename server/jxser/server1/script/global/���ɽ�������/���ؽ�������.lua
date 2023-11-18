@@ -4,16 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
-Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
 npc_name = "C«n L«n Hé Ph¸p"
+NPCNAME = "<color=green>"..npc_name.."<color>: ";
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 9 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyukunlun","Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyukunlun", NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "cuiyan") then
 		Talk(1,"","Qu¶ ®óng lµ mü n÷! Ng­êi xø T©y B¾c khæ hµn khã mµ s¸nh ®­îc! ")
 	elseif (player_Faction == "emei") then				
@@ -81,19 +81,19 @@ function go()
 	SetFaction("kunlun")      			-- Íæ¼Ò¼ÓÈëÀ¥ÂØ
 	SetCamp(3)
 	SetCurCamp(3)
-	SetRank(19)
+--	SetRank(19)
 	nt_setTask(137,69)
 	SetLastFactionNumber(9)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
---	nt_setTask(9,80*256)
---	SetRank(75)
---	Msg2Player("»¶Ó­Äã¼ÓÈëÎäµ±ÅÉ£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+	-- nt_setTask(9,80*256)
+	SetRank(75)
+	-- Msg2Player("»¶Ó­Äã¼ÓÈëÎäµ±ÅÉ£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_kl(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
 	Msg2Player("Hoan nghªnh b¹n gia nhËp C«n L«n ph¸i. Trë thµnh PhÊt trÇn ®Ö tö! Häc ®­îc H« Phong Ph¸p, Cuång L«i ChÊn §Şa")
 	AddNote("Gia nhËp C«n L«n ph¸i, trë thµnh PhÊt TrÇn ®Ö tö.")
-	Msg2Faction("kunlun",GetName().."tõ h«m nay gia nhËp C«n L«n ph¸i! Xin b¸i kiÕn c¸c vŞ ®¹o huynh s­ tû! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	--NewWorld(131, 1582, 3175)			-- µÈ´ıÌá¹©×ø±ê
+	Msg2Faction("kunlun",GetName().." tõ h«m nay gia nhËp C«n L«n ph¸i! Xin b¸i kiÕn c¸c vŞ ®¹o huynh s­ tû! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
+	NewWorld(131, 1582, 3175)			-- µÈ´ıÌá¹©×ø±ê
 
 end;
 

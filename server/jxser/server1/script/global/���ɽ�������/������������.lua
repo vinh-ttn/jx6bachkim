@@ -4,17 +4,17 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
-Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
 
 npc_name = "Thiªn V­¬ng T­íng LÜnh"
+NPCNAME = "<color=green>"..npc_name.."<color>: ";
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 1 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyutianwang","Ng­¬i ®· lµ ®Ö tö cña bæn gi¸o, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyutianwang",NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn gi¸o, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "emei") then				
 		Talk(1,"","Thanh HiÓu S­ Th¸i cña quı ph¸i tinh th«ng phËt häc, vâ nghÖ cao c­êng, bæn m«n ng­ìng mé ®· l©u!")
 	elseif (player_Faction == "cuiyan") then				
@@ -81,20 +81,22 @@ function go()
 	SetFaction("tianwang")       			--Íæ¼Ò¼ÓÈëÌìÍõ°ï
 	SetCamp(3)
 	SetCurCamp(3)
-	SetRank(43)
+--	SetRank(43)
 	nt_setTask(137,63)
 	SetLastFactionNumber(1)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
---	nt_setTask(3,80*256)
---	SetRank(69)
---	Msg2Player("»¶Ó­Äã¼ÓÈëÌìÍõ°ï£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+	-- nt_setTask(3,80*256)
+	SetRank(79)
+	-- Msg2Player("»¶Ó­Äã¼ÓÈëÌìÍõ°ï£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_tw(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
+--	Msg2Player("»¶Ó­¼ÓÈëÌìÍõ°ï£¬±ä³ÉÌìÍõ°ïµÜ×Ó!")
+--	Msg2Player("Ñ§µ½¾ªÀ×Õ¶£¬»Ø·çÂäÑã")
+--	AddNote("¼ÓÈëÌìÍõ°ï£¬³ÉÎª±¾°ïµÜ×Ó.")
 	Msg2Player("Hoan nghªnh b¹n gia nhËp Thiªn V­¬ng bang! H·y khëi ®Çu tõ mét ng­êi ThŞ vÖ!")
-	Msg2Player("Häc ®­îc vâ c«ng Kinh L«i Tr¶m, Håi Phong L¹c Nh¹n, Tr¶m Long QuyÕt")
 	AddNote("Gia nhËp Thiªn V­¬ng Bang, trë thµnh ThŞ VÖ.")
 	Msg2Faction("tianwang",GetName().." tõ h«m nay gia nhËp Thiªn V­¬ng bang, xin b¸i kiÕn c¸c vŞ huynh ®Ö! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	--NewWorld(59,1552,3188)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	NewWorld(59,1552,3188)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 end;
 
 function return_yes()
@@ -134,7 +136,6 @@ function Uworld1000_jiaoyutianwang()
 	nt_setTask(1000,260)
 	Msg2Player("§Ö tö tiÕp dÉn Thiªn V­¬ng b¶o b¹n ®· lµ ®Ö tö cña bang ph¸i, cã thÓ trùc tiÕp ®i gÆp Long Ngò nãi chuyÖn.")
 end
-
 
 function no()
 end;

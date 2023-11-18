@@ -2,14 +2,14 @@ _PlayersNameTb =
 {
 TopCaoThu = 
 		{
-			[1] = {Name = 'TCQGaming', Level = 150,},
+			[1] = {Name = '', Level = 0,},
 			[2] = {Name = '', Level = 0,},
 			[3] = {Name = '', Level = 0,},
 			[4] = {Name = '', Level = 0,},
 		},
 TopPhuHo = 
 		{
-			[1] = {Name = 'TCQGaming', Money = 100000000,},
+			[1] = {Name = '', Money = 0,},
 			[2] = {Name = '', Money = 0,},
 			[3] = {Name = '', Money = 0,},
 			[4] = {Name = '', Money = 0,},
@@ -17,7 +17,7 @@ TopPhuHo =
 TopMonPhai = 
 		{
 			shaolin = {Name = '', Level = 0,},
-			tianwang = {Name = 'TCQGaming', Level = 150,},
+			tianwang = {Name = '', Level = 0,},
 			tangmen = {Name = '', Level = 0,},
 			wudu = {Name = '', Level = 0,},
 			emei = {Name = '', Level = 0,},
