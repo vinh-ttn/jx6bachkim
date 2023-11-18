@@ -1,3 +1,3 @@
 nRankingData = {
-	[71774849] = {RankNum = 20201111235006, NamePlayer = 'GM01'},
+	[71774849] = {RankNum = 20231105235019, NamePlayer = 'GM01'},
 }
