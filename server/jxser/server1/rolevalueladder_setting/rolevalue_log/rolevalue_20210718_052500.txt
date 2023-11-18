@@ -1,0 +1,57 @@
+[Normal]Item: [Hoµn M¸] An Bang B®ng Tinh Thπch Hπng Li™n(0,1,209,0,4,10), unbind = 0, bind = 100
+[Normal]Item: [Hoµn M¸] An Bang CÛc Hoa Thπch Chÿ Hoµn(0,1,210,0,2,8), unbind = 0, bind = 100
+[Normal]Item: [Hoµn M¸] An Bang ßi“n Hoµng Thπch Ng‰c BÈi(0,1,211,1,1,8), unbind = 0, bind = 100
+[Normal]Item: [Hoµn M¸] An Bang K™ Huy’t Thπch GiÌi Chÿ(0,1,212,0,3,8), unbind = 0, bind = 100
+[Normal]Item: Phi™n VÚ (0,0,10,7,0,10), unbind = 0, bind = 2000
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Huy“n Thi’t Ki’m(0,0,0,0,1,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unbind = 0, bind = 0
+[Normal]Item: Toµn Thπch GiÌi Chÿ(0,0,3,0,2,10), unb
