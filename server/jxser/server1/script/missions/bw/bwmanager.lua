@@ -25,7 +25,7 @@ function main()
 	if (ms_state == 0) then 
 		Say("§©y lµ ®Êu tr­êng thi ®Êu l«i ®µi, n¬i c¸c nh©n sÜ trªn giang hå ®¬n ®Êu hoÆc tæ chøc thi ®Êu ®éi. HiÖn t¹i ch­a cã ai b¸o danh thi ®Êu, c¸c h¹ cã muèn b¸o danh kh«ng<color=yellow>HiÖn t¹i më miÔn phÝ l«i ®µi<color>", 3, "§­îc th«i/OnRegister", "Quy t¾c thi ®Êu ra sao?/OnHelp", "§Ó suy nghÜ c¸i ®·!/OnCancel");
 	elseif (ms_state == 1) then
-		Say("§©y lµ diÖn vâ tr­êng, §éi<color=yellow>"..szCaptainName[1].."<color>cïng ®éi<color=yellow>"..szCaptainName[2].."<color> tranh tµi<color=yellow>"..MemberCount.." vs "..MemberCount.."<color>, Ng­¬i cã yªu cÇu g×?",4,"Ta lµ tuyÓn thñ, muèn th­îng l«i ®µi./OnEnterMatch", "Ta lµ kh¸n gi¶, muèn vµo xem thi ®Êu./OnShowKey", "Ta muèn xem thi ®Êu./OnLook", "Ta kh«ng cã høng thó./OnCancel")
+		Say("§©y lµ diÖn vâ tr­êng, §éi<color=yellow>"..szCaptainName[1].."<color>cïng ®éi<color=yellow>"..szCaptainName[2].."<color> tranh tµi<color=yellow>"..MemberCount.." vs "..MemberCount.."<color>, Ng­¬i cã yªu cÇu g×?",4,"Ta lµ tuyÓn thñ, muèn th­îng l«i ®µi./OnShowKey", "Ta lµ kh¸n gi¶, muèn vµo xem thi ®Êu./OnEnterMatch", "Ta muèn xem thi ®Êu./OnLook", "Ta kh«ng cã høng thó./OnCancel")
 	elseif (ms_state == 2) then 
 		OnFighting();
 	else

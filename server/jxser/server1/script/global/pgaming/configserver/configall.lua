@@ -3,8 +3,8 @@
 
 FanePage = "www.facebook.com/grouppgaminggameoffline"
 
-CapKhiLoginVaoServer = 1
-CapDo = 119 --§¨ng nhËp lÇn ®Çu khi t¹o nh©n vËt tù ®éng lªn cÊp theo chØ ®Þnh
+CapKhiLoginVaoServer = 0
+CapDo = 1 --§¨ng nhËp lÇn ®Çu khi t¹o nh©n vËt tù ®éng lªn cÊp theo chØ ®Þnh
 --============================================================================================================--
 --													Ho¹t §éng												  --
 --============================================================================================================--
@@ -79,12 +79,12 @@ ScriptBanNgua = 0
 --============================================================================================================--
 --												TÝnh N¨ng													  --
 --============================================================================================================--
-ThoiGianBaoTriServer = 30 --TÝnh b»ng gi©y, test l¹i sau
+ThoiGianBaoTriServer = 30 --TÝnh b»ng gi©y
 UongChaoLapBat = 1
 AllowUyThacBachCauHoan = 1
-ThayDoiNgoaiTrang = 0 -- Thay §æi Ngo¹i Trang trung t©m T­¬ng D­¬ng
-DoiTenNhanVat = 0 -- Vâ L©m Minh Chñ L©m An
-GiftCode = 1 --Trung T©m Ba L¨ng HuyÖn
+ThayDoiNgoaiTrang = 1 -- Thay §æi Ngo¹i Trang trung t©m T­¬ng D­¬ng
+DoiTenNhanVat = 1 -- Vâ L©m Minh Chñ L©m An
+GiftCode = 0 --Trung T©m Ba L¨ng HuyÖn
 KhoaChucNangGiaoDich = 0
 KhoaChucNangBayBan = 0
 --============================================================================================================--
@@ -96,15 +96,15 @@ ThoiGianOpenServerText = "Thêi gian open server lµ 17h, xin h·y quay lai sau" --
 ThoiGianNhanThuongDuaTop = 202007050000 --NhËn trong NPC lÔ quan
 ThoiGianKetThucNhanThuongDuaTop = 202007110000
 ----------------BËt TÝnh N¨ng Test Game ------------------------------
-HoTroTestGame = 1
+HoTroTestGame = 0
 -------------------C¸c TÝnh N¨ng Hæ Trî T©n Thñ ------------------------------
-NhanHoTroKyNang1xDen6x = 1 
+NhanHoTroKyNang1xDen6x = 0 
 VongSangHoTroTanThu = 0
 GioiHanCapNhanHoTroVongSang = 80
 TocDoHoiPhucManaVongSangHoTro = 100
 TocDoHoiPhucMauVongSangHoTro = 100
 ----------------ChØnh Server Theo D¹ng NhËn §å Free PK -------------------------
-ChinhServerPkNhanFullDoVaCap = 1
+ChinhServerPkNhanFullDoVaCap = 0
 --Th«ng tin: 
 -- + NhËn 1 bé trang bÞ hoµng kim m«n ph¸i tïy chän khãa, chØ chän ®­îc 1 lÇn
 -- + NhËn c¸c lo¹i ®iÓm (trõ tiÒn ®ång vµ KNB), thó c­ëi, ®æi mµu, thµnh lËp Bang, trang bÞ xanh, tÝm.

@@ -69,11 +69,11 @@ function OnGlobalNpcDeath(nNpcIndex, nAttackerIndex)
 		
 		-- ¡∂ΩªÓ∂ØµÙ¬‰
 		if NpcFunLib:CheckBoatBoss(nNpcIndex) == 1 and tbRefiningIron:IsCarryOn() == 1 then
-			tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, {tbProp={6,1, 2293, 1,0,0,},nExpiredTime=tbRefiningIron.nCloseDate,}, "ThÒy t∆c Æ«u l‹nh r¨i Î hoπt ÆÈng luy÷n kim", 1)
+			--tbDropTemplet:GiveAwardByList(nNpcIndex, PlayerIndex, {tbProp={6,1, 2293, 1,0,0,},nExpiredTime=tbRefiningIron.nCloseDate,}, "ThÒy t∆c Æ«u l‹nh r¨i Î hoπt ÆÈng luy÷n kim", 1)
 		end
 		
 		if (DynamicExecute("\\script\\event\\jiefang_jieri\\201004\\main.lua", "FreedomEvent2010:IsActive1") == 1) then
-			DynamicExecute("\\script\\event\\jiefang_jieri\\201004\\soldier\\main.lua", "Soldier2010:MonsterDrop", nNpcIndex, PlayerIndex);
+			--DynamicExecute("\\script\\event\\jiefang_jieri\\201004\\soldier\\main.lua", "Soldier2010:MonsterDrop", nNpcIndex, PlayerIndex);
 		end
 		-- ªÓ‘æ∂» ¿ΩÁ Æ¥Ûboss
 		DynamicExecute("\\script\\huoyuedu\\worldtop10.lua", "checkworldtop10", nNpcIndex, PlayerIndex)

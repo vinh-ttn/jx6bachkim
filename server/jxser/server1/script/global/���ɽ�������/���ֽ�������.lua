@@ -4,16 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
+Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
 npc_name = "ThiÕu L©m La H¸n"
-NPCNAME = "<color=green>"..npc_name.."<color>: ";
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 0 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyushaolin",NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyushaolin","Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "cuiyan") then
 		Talk(1,"","Quı m«n lÊy vò luyÖn vâ! UyÓn chuyÓn mµ tinh diÖu! TiÓu t¨ng v« cïng béi phôc!")
 	elseif (player_Faction == "emei") then				
@@ -85,19 +85,19 @@ function go()
 	SetFaction("shaolin")       			--Íæ¼Ò¼ÓÈëÃÅÅÉ
 	SetCamp(1)
 	SetCurCamp(1)
---	SetRank(1)
+	SetRank(1)
 	nt_setTask(137,67)
 	SetLastFactionNumber(0)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
-	-- nt_setTask(7,80*256)
-	SetRank(72)
-	-- Msg2Player("»¶Ó­Äã¼ÓÈëÉÙÁÖÅÉ£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+--	nt_setTask(7,80*256)
+--	SetRank(72)
+--	Msg2Player("»¶Ó­Äã¼ÓÈëÉÙÁÖÅÉ£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_sl(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
 	Msg2Player("Hoan nghªnh b¹n gia nhËp ThiÕu L©m, trë thµnh T¶o §Şa t¨ng! Häc ®­îc Hµng Long BÊt Vò, Kim Cang Phôc Ma ")
 	AddNote("Gia NhËp ThiÕu L©m ph¸i, trë thµnh T¶o §Şa t¨ng.")
-	Msg2Faction("shaolin",GetName().." tõ h«m nay gia nhËp ThiÕu l©m, xin b¸i kiÕn c¸c vŞ huynh ®Ö! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	NewWorld(103, 1845, 2983)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	Msg2Faction("shaolin",GetName().."tõ h«m nay gia nhËp ThiÕu l©m, xin b¸i kiÕn c¸c vŞ huynh ®Ö! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
+	--NewWorld(103, 1845, 2983)			--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 
 end;
 

@@ -50,7 +50,7 @@ end
 Load_TransLifeSetting()
 
 TB_LEVEL_LIMIT = {160, 170, 180, 200, 200};
-TB_TRANSTIME_LIMIT = {90, 180, 180, 180, 180};
+TB_TRANSTIME_LIMIT = {0, 0, 0, 0, 0};
 -- 4×ªÐèÒªµÄÆäËûµÀ¾ß
 TBITEMNEED_4 = {
 	[1] = {szName = "TÝch LÞch ®¬n", tbProb = {6,1,2973}, nCount = 999},	-- Åùö¨µ¯
@@ -113,11 +113,11 @@ TSK_ZHUANSHENG_LASTTIME = 2580;			-- ±£´æ×îºó´Î×ªÉúµÄServerTime ÒÔÃë¼Ç£¨Ïà¶Ô1700
 TSKM_ZHUANSHENG_RESISTID = 199;			-- ÁÙÊ±´æ·ÅÑ¡ÔñÔö¼ÓµÄ¿¹ÐÔ
 --¿¹ÐÔ±àºÅ£¬0£º»ð£¬1£º±ù£¬2:¶¾£¬3:µç£¬4:ÎïÀí
 TB_BASE_RESIST = {
-	[0] = "<#16083>",
-	[1] = "<#16084>",
-	[2] = "<#16085>",
-	[3] = "<#16086>",
-	[4] = "<#16087>",
+	[0] = "<Kh¸ng háa>",
+	[1] = "<Kh¸ng b¨ng>",
+	[2] = "<Kh¸ng ®éc>",
+	[3] = "<Kh¸ng l«i>",
+	[4] = "<Phßng thñ vËt lý>",
 	}
 
 TSK_TRANSLIFE_4 = 2908		-- ±£´æÊÇ·ñ½ÓÊÜÁË4×ªÈÎÎñ	

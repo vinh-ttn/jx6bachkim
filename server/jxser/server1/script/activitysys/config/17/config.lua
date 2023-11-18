@@ -14,9 +14,9 @@ tbConfig[1] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetAward",	{71,1,"B¶o r­¬ng thÇn bÝ cña D· TÈu"} },
-		{"PlayerFunLib:ConsumeEquiproomItem",	{{tbProp={6,1,2348,1,-1,0},},6} },
-		{"ThisActivity:Jiluxiaohao_yesou",	{nil} },
+		--{"PlayerFunLib:GetAward",	{71,1,"B¶o r­¬ng thÇn bÝ cña D· TÈu"} },
+		--{"PlayerFunLib:ConsumeEquiproomItem",	{{tbProp={6,1,2348,1,-1,0},},6} },
+		--{"ThisActivity:Jiluxiaohao_yesou",	{nil} },
 	},
 }
 tbConfig[2] = --Ò»¸öÏ¸½Ú
@@ -52,9 +52,9 @@ tbConfig[3] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetAward",	{73,1,"ChÝ T«n BÝ B¶o"} },
-		{"PlayerFunLib:ConsumeEquiproomItem",	{{tbProp={6,1,2348,1,-1,0},},12} },
-		{"ThisActivity:Jiluxiaohao_zhizun",	{nil} },
+		--{"PlayerFunLib:GetAward",	{73,1,"ChÝ T«n BÝ B¶o"} },
+		--{"PlayerFunLib:ConsumeEquiproomItem",	{{tbProp={6,1,2348,1,-1,0},},12} },
+		--{"ThisActivity:Jiluxiaohao_zhizun",	{nil} },
 	},
 }
 tbConfig[4] = --Ò»¸öÏ¸½Ú
@@ -71,7 +71,7 @@ tbConfig[4] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetAward",	{74,1,"Tµi B¶o Thñy TÆc"} },		
+		--{"PlayerFunLib:GetAward",	{74,1,"Tµi B¶o Thñy TÆc"} },		
 	},
 }
 tbConfig[5] = --Ò»¸öÏ¸½Ú
@@ -88,7 +88,7 @@ tbConfig[5] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"PlayerFunLib:GetAward",	{75,1,"Phong Háa CÈm Nang"} },
+		--{"PlayerFunLib:GetAward",	{75,1,"Phong Háa CÈm Nang"} },
 	},
 }
 tbConfig[6] = --Ò»¸öÏ¸½Ú
@@ -155,7 +155,7 @@ tbConfig[9] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,2743,1,0,0},},9,"100"} },
+		--{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,2743,1,0,0},},9,"100"} },
 		--§iÒu chØnh phÇn th­ëng r¬i ra tõ boss thuû tÆc ®¹i ®Çu lÜnh - Modified By DinhHQ - 20120523
 		{"ThisActivity:VnFFBigBossDrop",	{nil}}
 	},
@@ -175,7 +175,7 @@ tbConfig[10] = --Ò»¸öÏ¸½Ú
 	},
 	tbActition = 
 	{
-		{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,2743,1,0,0},},3,"100"} },
+		--{"NpcFunLib:DropSingleItem",	{{tbProp={6,1,2743,1,0,0},},3,"100"} },
 		--§iÒu chØnh phÇn th­ëng r¬i ra tõ boss thuû tÆc ®¹i ®Çu lÜnh - Modified By DinhHQ - 20120523
 		{"ThisActivity:VnFFBigBossDrop",	{nil},}
 	},

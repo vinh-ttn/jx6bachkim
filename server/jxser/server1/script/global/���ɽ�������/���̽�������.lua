@@ -4,16 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
+Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
-npc_name = "Thiªn NhÉn Tö SÜ"
-NPCNAME = "<color=green>"..npc_name.."<color>: ";
+npc_name = "Thiªn NhÉn Tö SÜ "
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 7 ) then
 			nt_setTask(1000,250)
-			Talk(1,"Uworld1000_jiaoyutianren",NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
+			Talk(1,"Uworld1000_jiaoyutianren","Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ®i n÷a, cã thÓ trùc tiÕp gÆp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "emei") then
 		Talk(1,"","NÕu Nga My ph¸i chŞu gia nhËp bæn gi¸o, vËy th× bän ta suèt ngµy ®Òu ®­îc ng¾m nh×n ng­êi ®Ñp! ¤i! Sung s­íng chÕt ®i th«i!")
 	elseif (player_Faction == "cuiyan") then
@@ -68,25 +68,25 @@ function yes()
 	if ( Uworld1000 == 240 ) or ( Uworld1000 == 250 ) then
 		nt_setTask(1000,260)
 	end
-	-- Talk(1,"","Gia nhËp bæn gi¸o cÇn ph¶i chÊp hµnh hiÖu lÖnh! M¹nh ®­îc yÕu thua chİnh lµ t«n chØ cña bæn gi¸o! Ng­¬i h·y tù dïng thùc lùc ®Ó chøng minh m×nh!")
+	Talk(1,"","Gia nhËp bæn gi¸o cÇn ph¶i chÊp hµnh hiÖu lÖnh! M¹nh ®­îc yÕu thua chİnh lµ t«n chØ cña bæn gi¸o! Ng­¬i h·y tù dïng thùc lùc ®Ó chøng minh m×nh!")
 	SetRevPos(49,28)	 						--ÉèÖÃÖØÉúµã
 	nt_setTask(4, 10*256)
 	SetFaction("tianren")      					--Íæ¼Ò¼ÓÈëÌìÈÌ½Ì
 	SetCamp(2)
 	SetCurCamp(2)
---	SetRank(55)							--ÉèÖÃ³ÆºÅ
+	SetRank(55)							--ÉèÖÃ³ÆºÅ
 	nt_setTask(137,64)
 	SetLastFactionNumber(7)
+	Msg2Player("Gia nhËp Thiªn NhÉn gi¸o, trë thµnh S¸t thñ. Häc ®­îc vâ c«ng: Tµn D­¬ng Nh­ HuyÕt; §¬n ChØ LiÖt DiÖm")
+	AddNote("Gia nhËp Thiªn NhÉn gi¸o, trë thµnh S¸t thñ ")
+	Msg2Faction("tianren",GetName().."tõ h«m nay gia nhËp Thiªn NhÉn gi¸o! Xin b¸i kiÕn c¸c vŞ ®¹o huynh s­ tû! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
 -- Ö±½Ó´¦ÀíÁ÷³Ì
-	-- nt_setTask(4,80*256)
-	SetRank(81)
-	-- Msg2Player("»¶Ó­Äã¼ÓÈëÌìÈÌ½Ì£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+--	nt_setTask(4,80*256)
+--	SetRank(81)
+--	Msg2Player("»¶Ó­Äã¼ÓÈëÌìÈÌ½Ì£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_tr(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
-	Msg2Player("Gia nhËp Thiªn NhÉn gi¸o, trë thµnh S¸t thñ. Häc ®­îc vâ c«ng: Tµn D­¬ng Nh­ HuyÕt; §¬n ChØ LiÖt DiÖm")
-	AddNote("Gia nhËp Thiªn NhÉn gi¸o, trë thµnh S¸t thñ")
-	Msg2Faction("tianren",GetName().." tõ h«m nay gia nhËp Thiªn NhÉn gi¸o! Xin b¸i kiÕn c¸c vŞ ®¹o huynh s­ tû! Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	NewWorld(49, 1644, 3215)					--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
+	--NewWorld(49, 1644, 3215)					--°ÑÍæ¼Ò´«ËÍµ½ÃÅÅÉÈë¿Ú
 
 end;
 

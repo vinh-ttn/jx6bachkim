@@ -4,17 +4,16 @@
 Include("\\script\\task\\newtask\\newtask_head.lua")
 Include("\\script\\task\\newtask\\education\\knowmagic.lua")
 Include("\\script\\global\\skills_table.lua")
+Include("\\script\\global\\map_helper.lua")
 Include( "\\script\\missions\\freshman_match\\head.lua" )
-
-npc_name = "Thóy Yªn Hoa Sø"
-NPCNAME = "<color=green>"..npc_name.."<color>: "
+npc_name = "Thóy Yªn Hoa Sø "
 
 function default_talk()
 	player_Faction = GetFaction()
 	Uworld1000 = nt_getTask(1000)
 	if (( Uworld1000 == 240 ) or ( Uworld1000 == 250 )) and ( GetLastFactionNumber() == 5 ) then
-		nt_setTask(1000,250)
-		Talk(1,"Uworld1000_jiaoyucuiyan", NPCNAME.."Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ph¶i ®i, cã thÓ gÆp trùc tiÕp Long Ngò nãi chuyÖn.")
+			nt_setTask(1000,250)
+			Talk(1,"Uworld1000_jiaoyucuiyan","Ng­¬i ®· lµ ®Ö tö cña bæn ph¸i, kh«ng cÇn ph¶i ®i, cã thÓ gÆp trùc tiÕp Long Ngò nãi chuyÖn.")
 	elseif (player_Faction == "cuiyan") then		-- ±¾ÃÅ
 		Say("Muéi l¹i lĞn ®i ch¬i n÷a ­?",4,"Uhm! PhiÒn tû tû ®­a muéi vÒ!/return_yes","T×m hiÓu khu vùc luyÖn c«ng/map_help","T×m hiÓu vâ nghÖ bæn m«n/skill_help","Tû cø gi¶ vê nh­ kh«ng thÊy muéi lµ ®­îc råi!/no")
 	elseif (player_Faction == "emei") then				
@@ -55,7 +54,7 @@ function defection_get()
 	Talk(1,"","ChØ cÇn muéi ®Õn thØnh cÇu Thanh HiÓu S­ Th¸i xin chuyÓn qua Thóy Yªn m«n, sau ®ã ®Õn tr×nh kiÕn víi Do·n Hµm Yªn ch­ëng m«n cña ta th× cã thÓ ®­îc!  Yªn t©m!  Thanh HiÓu S­ Th¸i th«ng t×nh ®¹t lı, sÏ kh«ng lµm khã muéi ®©u! ")
 	nt_setTask(6,5*256+10)
 	Msg2Player("Muèn gia nhËp Thóy Yªn m«n, chØ cÇn ®Õn xin phĞp Thanh HiÓu S­ Th¸i sau ®ã ®Õn tr×nh kiÕn víi Do·n Hµm Yªn lµ ®­îc!")
-	-- AddNote("Muèn gia nhËp Thóy Yªn m«n, chØ cÇn ®Õn xin phĞp Thanh HiÓu S­ Th¸i sau ®ã ®Õn tr×nh kiÕn víi Do·n Hµm Yªn lµ ®­îc!")
+	AddNote("Muèn gia nhËp Thóy Yªn m«n, chØ cÇn ®Õn xin phĞp Thanh HiÓu S­ Th¸i sau ®ã ®Õn tr×nh kiÕn víi Do·n Hµm Yªn lµ ®­îc!")
 end
 
 function enroll_select()
@@ -82,19 +81,19 @@ function go()
 	SetFaction("cuiyan")      			--Íæ¼Ò¼ÓÈë¶ëáÒÅÉ
 	SetCamp(3)
 	SetCurCamp(3)
---	SetRank(31)
+	SetRank(31)
 	nt_setTask(137,66)
 	SetLastFactionNumber(5)
 -- Ö±½Ó´¦ÀíÁ÷³Ì
-	-- nt_setTask(6,80*256)
-	SetRank(77)
-	-- Msg2Player("»¶Ó­Äã¼ÓÈë´äÑÌÃÅ£¬Ö±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
+--	nt_setTask(6,80*256)
+--	SetRank(67)
+--	Msg2Player("»¶Ó­Äã¼ÓÈë´äÑÌÃÅ£¬²âÊÔÖĞÖ±½ÓÑ§»á±¾ÃÅËùÓĞ¼¼ÄÜ¡£")
 	add_cy(10)			-- µ÷ÓÃskills_table.luaÖĞµÄº¯Êı£¬²ÎÊıÎªÑ§µ½¶àÉÙ¼¶¼¼ÄÜ¡£
 -- ½áÊø
-	Msg2Player("Hoan nghªnh b¹n gia nhËp Thóy Yªn m«n! Trë thµnh Hoa Tú. Häc ®­îc Phong Hoa TuyÕt NguyÖt, Phong QuyÓn Tµn TuyÕt")
-	AddNote("Gia nhËp Thóy Yªn m«n, trë thµnh Hoa Tú")
-	Msg2Faction("cuiyan",GetName().." tõ h«m nay gia nhËp Thóy Yªn m«n. Xin b¸i kiÕn c¸c vŞ s­ tû. Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
-	NewWorld(154, 403, 1361)			-- ´«µ½ÃÅÅÉÖĞ
+	Msg2Player("Hoan nghªnh b¹n gia nhËp Thóy Yªn m«n! Trë thµnh Hoa Tú. Häc®­îc Phong Hoa TuyÕt NguyÖt, Phong QuyÓn Tµn TuyÕt")
+	AddNote("gia nhËp Thóy Yªn m«n, trë thµnh Hoa Tú ")
+	Msg2Faction("cuiyan",GetName().."tõ h«m nay gia nhËp Thóy Yªn m«n. Xin b¸i kiÕn c¸c vŞ s­ tû. Mong c¸c vŞ quan t©m chØ gi¸o!",GetName())
+	--NewWorld(154, 403, 1361)			-- ´«µ½ÃÅÅÉÖĞ
 
 end;
 

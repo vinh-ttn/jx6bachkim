@@ -145,6 +145,7 @@ function OfflineAward:CalcExp(type, itr, level, tran_count)
 		return 0
 	end
 	local exp = tb[index] * itr
+
 	return exp
 end
 
