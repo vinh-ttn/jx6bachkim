@@ -117,7 +117,9 @@ function SimCityKeoXe:removeAll()
 			DelNpcSafe(tbNpc.finalIndex)
 			GroupFighter:DelNpcSafe_children(tbNpc.nNpcListIndex)
 			GroupFighter.tbNpcList[key] = nil
-			GroupFighter.npcByWorld["w"..tbNpc.nMapId][key] = nil
+			if (GroupFighter.npcByWorld["w"..tbNpc.nMapId]) then
+				GroupFighter.npcByWorld["w"..tbNpc.nMapId][key] = nil
+			end
 		end
 	end
 end

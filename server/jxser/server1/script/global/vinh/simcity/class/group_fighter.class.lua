@@ -302,6 +302,14 @@ function GroupFighter:_addNpcGo(tbNpc, isNew, goX, goY)
 				end
 				
 
+				-- Set NPC life
+				if tbNpc.cap and tbNpc.cap < 2 and NPCINFO_SetNpcCurrentLife then
+
+					local maxHP = SimCityNPCInfo:getHPByCap(tbNpc.cap)
+					NPCINFO_SetNpcCurrentMaxLife(nNpcIndex, maxHP)
+					NPCINFO_SetNpcCurrentLife(nNpcIndex, maxHP)
+					NPCINFO_SetMaxLife(nNpcIndex, maxHP)
+				end
 				return nNpcListIndex
 			end
 		end
@@ -402,17 +410,19 @@ function GroupFighter:_getNpcAroundNpcList(nNpcIndex, radius)
 		local nW = SubWorldIdx2ID(nW32)
 
 		-- Get info for npc in this world
-		for key, nListId in self.npcByWorld["w"..nW] do
-			if nListId ~= myListId then 
-	    		local tbNpc = self.tbNpcList["n"..nListId]
-				if tbNpc then
-					if (tbNpc.isDead == 0) then
-						local oX32, oY32 = GetNpcPos(tbNpc.finalIndex)
-						local oX = oX32/32
-						local oY = oY32/32
-						if GetDistanceRadius(oX,oY,areaX,areaY) < radius then
-							tinsert(allNpcs, tbNpc.finalIndex)
-							nCount = nCount + 1
+		if self.npcByWorld["w"..nW] then
+			for key, nListId in self.npcByWorld["w"..nW] do
+				if nListId ~= myListId then 
+		    		local tbNpc = self.tbNpcList["n"..nListId]
+					if tbNpc then
+						if (tbNpc.isDead == 0) then
+							local oX32, oY32 = GetNpcPos(tbNpc.finalIndex)
+							local oX = oX32/32
+							local oY = oY32/32
+							if GetDistanceRadius(oX,oY,areaX,areaY) < radius then
+								tinsert(allNpcs, tbNpc.finalIndex)
+								nCount = nCount + 1
+							end
 						end
 					end
 				end
@@ -1085,6 +1095,13 @@ function GroupFighter:_addNpcGo_chilren(nListId, nW)
 					self:_randomNgoaiTrang(child, nNpcIndex)
 				end
 
+				if tbNpc.cap and tbNpc.cap < 2 and NPCINFO_SetNpcCurrentLife then
+					local maxHP = SimCityNPCInfo:getHPByCap(tbNpc.cap)
+					NPCINFO_SetNpcCurrentMaxLife(nNpcIndex, maxHP)
+					NPCINFO_SetNpcCurrentLife(nNpcIndex, maxHP)
+					NPCINFO_SetMaxLife(nNpcIndex, maxHP)
+				end
+
 				-- Store it
 				child.finalIndex = nNpcIndex
 				child.isDead = 0
@@ -1300,21 +1317,21 @@ function GroupFighter:ChildrenDead(childrenIndex, playerAttacker)
 
 		if tbNpc.tongkim == 1 then
 			SimCityTongKim:OnDeath(childrenIndex, child.rank or 1)
-		else
+		--else
 
-			local oPlayerIndex = PlayerIndex
-			if playerAttacker > 0 then			
+		--	local oPlayerIndex = PlayerIndex
+		--	if playerAttacker > 0 then			
 
-				if oPlayerIndex ~= playerAttacker then
-					PlayerIndex = playerAttacker
-				end
+		--		if oPlayerIndex ~= playerAttacker then
+		--			PlayerIndex = playerAttacker
+		--		end
 
-				tbAwardTemplet:GiveAwardByList(tbAwardgive, "KillBossExp")
-				local nseries = NPCINFO_GetSeries(childrenIndex)
-				ITEM_DropRateItem(childrenIndex, 8,"\\settings\\droprate\\npcdroprate90.ini", 0, 10, nseries);
+		--		tbAwardTemplet:GiveAwardByList(tbAwardgive, "KillBossExp")
+		--		local nseries = NPCINFO_GetSeries(childrenIndex)
+		--		ITEM_DropRateItem(childrenIndex, 8,"\\settings\\droprate\\npcdroprate90.ini", 0, 10, nseries);
 
-				PlayerIndex = oPlayerIndex
-			end
+		--		PlayerIndex = oPlayerIndex
+		--	end
 		end
 
 		self:_check_full_death(nListId)
@@ -1340,17 +1357,18 @@ function GroupFighter:OnNpcDeath(nNpcIndex, playerAttacker)
 		if tbNpc.tongkim == 1 then
 			SimCityTongKim:OnDeath(nNpcIndex, tbNpc.rank or 1)
 		else
-			if playerAttacker > 0 then
+			--if playerAttacker > 0 then
 
-				local oPlayerIndex = PlayerIndex
-				if oPlayerIndex ~= playerAttacker then
-					PlayerIndex = playerAttacker
-				end
-				tbAwardTemplet:GiveAwardByList(tbAwardgive, "KillBossExp")
-				local nseries = NPCINFO_GetSeries(nNpcIndex)
-				ITEM_DropRateItem(nNpcIndex, 8,"\\settings\\droprate\\npcdroprate90.ini", 0, 10, nseries)
-				PlayerIndex = oPlayerIndex
-			end
+			--	local oPlayerIndex = PlayerIndex
+			--	if oPlayerIndex ~= playerAttacker then
+			--		PlayerIndex = playerAttacker
+			--	end
+			--	CallPlayerFunction(1, Msg2Player, "NormalDeath")
+			--	tbAwardTemplet:GiveAwardByList(tbAwardgive, "KillBossExp")
+			--	local nseries = NPCINFO_GetSeries(nNpcIndex)
+			--	ITEM_DropRateItem(nNpcIndex, 8,"\\settings\\droprate\\npcdroprate90.ini", 0, 10, nseries)
+			--	PlayerIndex = oPlayerIndex
+			--end
 		end
 
 		self:_check_full_death(nListId)
@@ -1786,7 +1804,9 @@ function GroupFighter:_doParentTick(nListId)
 			needRespawn = 1
 
 			-- Remove the list from this world
-			self.npcByWorld["w"..tbNpc.nMapId]["n"..tbNpc.nNpcListIndex] = nil
+			if (self.npcByWorld["w"..tbNpc.nMapId]) then
+				self.npcByWorld["w"..tbNpc.nMapId]["n"..tbNpc.nNpcListIndex] = nil
+			end
 
 		else
 
@@ -1843,10 +1863,18 @@ function GroupFighter:ThongBaoBXH(nW)
 	for i,tbNpc in self.tbNpcList do
 		if tbNpc.nMapId == nW then 
 			tinsert(allPlayers, {
-				i, tbNpc.fightingScore
+				i, tbNpc.fightingScore, "npc"
 			})
 		end
 	end 
+
+	if (SimCityTongKim.playerInTK and SimCityTongKim.playerInTK[nW]) then
+		for pId,data in SimCityTongKim.playerInTK[nW] do
+			tinsert(allPlayers, {
+				pId, data.score, "player"
+			})
+		end
+	end
 
 	if getn(allPlayers) > 1 then
 		local maxIndex = getn(allPlayers)
@@ -1860,30 +1888,45 @@ function GroupFighter:ThongBaoBXH(nW)
 		Msg2Map(nW, "<color=yellow>=================================<color>")
 
 		for j = 1, maxIndex do	
-			local tbNpc = self.tbNpcList[allPlayers[j][1]]
-			if tbNpc then
-				local phe = ""
 
-				if (tbNpc.tongkim == 1) then
-					if (tbNpc.tongkim_name) then
-						phe = tbNpc.tongkim_name
-					else
-						phe = "Kim"			
-						if tbNpc.camp == 1 then
-							phe = "Tèng"
+			local info = allPlayers[j]
+
+			if info[3] == "npc" then
+
+				local tbNpc = self.tbNpcList[info[1]]
+				if tbNpc then
+					local phe = ""
+
+					if (tbNpc.tongkim == 1) then
+						if (tbNpc.tongkim_name) then
+							phe = tbNpc.tongkim_name
+						else
+							phe = "Kim"			
+							if tbNpc.camp == 1 then
+								phe = "Tèng"
+							end
 						end
 					end
-				end
 
-				if phe == "Kim" then
-					phe = "K"
-				else
-					phe = "T"
-				end
+					if phe == "Kim" then
+						phe = "K"
+					else
+						phe = "T"
+					end
 
-				local msg = "<color=white>"..j.." <color=yellow>["..phe.."] "..SimCityTongKim.RANKS[tbNpc.rank].." <color>"..(tbNpc.hardsetName or SimCityNPCInfo:getName(tbNpc.nNpcId)).."<color=white> ("..allPlayers[j][2]..")<color>"
+					local msg = "<color=white>"..j.." <color=yellow>["..phe.."] "..SimCityTongKim.RANKS[tbNpc.rank].." <color>"..(tbNpc.hardsetName or SimCityNPCInfo:getName(tbNpc.nNpcId)).."<color=white> ("..allPlayers[j][2]..")<color>"
+					Msg2Map(nW, msg)
+				end
+			else
+
+				local tbPlayer = SimCityTongKim.playerInTK[nW][info[1]]
+				local msg = "<color=white>"..j.." <color=red>["..(tbPlayer.phe).."] "..(tbPlayer.rank).." <color>"..(tbPlayer.name).."<color=white> ("..(tbPlayer.score)..")<color>"
 				Msg2Map(nW, msg)
+
 			end
+
+
+
 		end
 		Msg2Map(nW, "<color=yellow>=================================<color>")			
 	end 
